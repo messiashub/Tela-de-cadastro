@@ -1,5 +1,5 @@
 
-"use strict"
+/* "use strict" */
 
 //index e index2
 let $btn = document.querySelector(".fa-eye");
@@ -14,14 +14,5 @@ $btn.addEventListener('click', ()=>{
 })
 
 // index2
-let $confirm = document.querySelector("#eye");
-$confirm.addEventListener('click', ()=>{
-    let $confimSenha = document.querySelector("#confirm-senha");
-    if($confimSenha.getAttribute("type") == 'password'){
-        $confimSenha.setAttribute("type","text")
 
-    }else{
-        $confimSenha.setAttribute("type","password")
-    }
-})
 
