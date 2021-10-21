@@ -118,9 +118,28 @@ $confirm.addEventListener('click', () => {
 
 $cadastrar.addEventListener('click', () => {
     if($validNome && $validUsuario && $validSenha && $validConfirmSenha ){
+        /* no localStorage pegue o item $listUser , se não tiver crie um array */
+        let $listUser = JSON.parse(localStorage.getItem('listUser') || "[]");
+
+        $listUser.push(
+            {
+                $nomeCad: $nome.value,
+                $userCad: $usuario.value,
+                $senhaCad: $senha.value
+            }
+        )
+        
+
+        localStorage.setItem('listUser', JSON.stringify($listUser))
+
         $resp.setAttribute('style','color:#00FEFE');
         $resp.setAttribute('style','background-color:#103f6d66')
-        $resp.innerHTML= "Cadastrando usuário..."
+        $resp.innerHTML = "Usuário cadastrado com sucesso!"
+
+        setTimeout(() => {
+             window.location.href = 'http://127.0.0.1:5500/index.html'
+        }, 3000);
+       
 
     }else{
         $resp.setAttribute('style','color:red')

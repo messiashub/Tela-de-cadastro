@@ -13,6 +13,9 @@ $btn.addEventListener('click', ()=>{
     }
 })
 
-// index2
+let $btnEntrar = document.querySelector("#entrar");
+$btnEntrar.addEventListener('click',function(){
+    alert('olá')
+})
 
 
