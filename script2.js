@@ -86,14 +86,6 @@ $confirmSenha.addEventListener("keyup", () => {
     }
 })
 
-
-
-
-
-
-
-
-
 $btn.addEventListener('click', () => {
     let $inputSenha2 = document.querySelector("#senha2");
     if ($inputSenha2.getAttribute("type") == 'password') {
@@ -102,8 +94,6 @@ $btn.addEventListener('click', () => {
         $inputSenha2.setAttribute("type", "password")
     }
 })
-
-
 
 $confirm.addEventListener('click', () => {
     let $confirmSenha = document.querySelector("#confirm-senha");
@@ -114,7 +104,6 @@ $confirm.addEventListener('click', () => {
         $confirmSenha.setAttribute("type", "password")
     }
 })
-
 
 $cadastrar.addEventListener('click', () => {
     if($validNome && $validUsuario && $validSenha && $validConfirmSenha ){
@@ -129,7 +118,6 @@ $cadastrar.addEventListener('click', () => {
             }
         )
         
-
         localStorage.setItem('listUser', JSON.stringify($listUser))
 
         $resp.setAttribute('style','color:#00FEFE');
@@ -140,7 +128,6 @@ $cadastrar.addEventListener('click', () => {
              window.location.href = 'http://127.0.0.1:5500/index.html'
         }, 3000);
        
-
     }else{
         $resp.setAttribute('style','color:red')
         $resp.innerHTML="Preencha os campos"
